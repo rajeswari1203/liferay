@@ -20,7 +20,7 @@ bash 'Extract tomcat archive' do
   cwd node['liferay']['install_location']
   code <<-EOH
     unzip  #{tmp_path}/liferay.zip
-    sh "#{node['liferay']['install_location']}/liferay-ce-portal-7.0-ga3/tomcat-8.0.32/bin/startup.sh" 
+    sh "#{node['tomcat']['start']}startup.sh" 
   EOH
 
 end
